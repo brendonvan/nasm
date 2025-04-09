@@ -8,7 +8,6 @@ Auto Rename Tag [Jun Han]
 Better Comments [Aaron Bond]
 Prettier
 
-
 [dependencies]
 "@tailwindcss/vite": "^4.1.3",
 "react": "^19.0.0",
