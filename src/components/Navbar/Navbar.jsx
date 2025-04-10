@@ -1,12 +1,11 @@
 import CookieBanner from "../CookieBanner/CookieBanner";
+import ContinuityBar from "../ContinuityBar/ContinuityBar";
 
 function Navbar() {
   return (
     <>
       <CookieBanner />
-
-      {/* Continuity Bar */}
-      <div className=""></div>
+      <ContinuityBar />
 
       {/* Navbar */}
       <div className="">

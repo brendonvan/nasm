@@ -5,4 +5,19 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
+  theme: {
+    screens: {
+      sm: '425px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1440px',
+      '2xl': '2560px',
+    }
+  },
+  server: {
+    watch: {
+      usePolling: true, // useful in some environments (like WSL, Docker, or VM)
+    },
+    hmr: true, // enabled by default
+  }
 })
