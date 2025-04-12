@@ -23,7 +23,7 @@ function Navbar() {
 
         {/* Nav Right Side */}
         <div className="flex items-center justify-end">
-          <button onClick={signInButton} className="px-4 pt-[8px] pb-[12px] rounded-[25px] bg-[var(--brand-color-dark)] leading-none">SIGN IN</button>
+          <button onClick={signInButton} className="px-4 pt-[9px] pb-[12px] text-[14px] rounded-[25px] bg-[var(--brand-color-dark)] leading-none">SIGN IN</button>
           <a href="https://shop.nasm.org/cart">
             <img src="/images/nasm-shopping-cart.png" alt="Cart" className="w-[2.5rem] ml-4 mb-2"/>
           </a>

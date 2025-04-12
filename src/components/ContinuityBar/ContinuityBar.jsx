@@ -27,7 +27,7 @@ const slides = [
 
 function ContinuityBar() {
   return (
-    <div className="h-[70px] text-[var(--brand-color-dark)] bg-[var(--brand-color-highlight)] lg:flex lg:items-center">
+    <div className="h-[70px] text-[var(--brand-color-dark)] bg-[var(--brand-color-highlight)] lg:flex lg:items-center lg:h-[48px]">
       {/* Carousel */}
       <Swiper
         className="h-[70px] w-full"

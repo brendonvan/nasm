@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+import MainLayout from "../layouts/MainLayout";
+
 // Lazy loaded route groups
 const Home = React.lazy(() => import("../pages/Home/Home"));
 const About = React.lazy(() => import("../pages/About/About"));
@@ -18,21 +20,23 @@ const AppRoutes = () => {
     <>
       {/* Main site layout */}
       <Routes>
-        {/* Top-level routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route element={<MainLayout />}>
+          {/* Top-level routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* Products */}
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:productId" element={<Products />} />
-        
-        {/* Blogs */}
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog/:blogId" element={<Blogs />} />
+          {/* Products */}
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:productId" element={<Products />} />
 
-        {/* Catch-all */}
-        <Route path="*" element={<NotFound />} />
+          {/* Blogs */}
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:blogId" element={<Blogs />} />
+
+          {/* Catch-all */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </>
   );
