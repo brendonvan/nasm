@@ -16,8 +16,8 @@ export default defineConfig({
   },
   server: {
     watch: {
-      usePolling: true, // useful in some environments (like WSL, Docker, or VM)
+      usePolling: true,
     },
-    hmr: true, // enabled by default
+    hmr: true,
   }
 })
