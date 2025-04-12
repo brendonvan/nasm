@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   theme: {
     screens: {
-      sm: '425px',
+      sm: '430px',
       md: '768px',
       lg: '1024px',
       xl: '1440px',
-      '2xl': '2560px',
+      '2xl': '1920px',
     }
   },
   server: {
