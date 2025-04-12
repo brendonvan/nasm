@@ -1,8 +1,6 @@
-import './NotFound.css';
-
 function NotFound() {
   return (
-    <div className="NotFound">
+    <div>
         <p>NotFound</p>
     </div>
   );
