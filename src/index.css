@@ -1,25 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "peridot-pe-variable", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "peridot-pe-variable", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   font-variation-settings: "wdth" 100, "wght" 400;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--ui-color-light);
+  background-color: var(--ui-color-off-dark);
 
   /* Color Variables */
   --brand-color-black: #000000;
   --brand-color-dark: #123257;
   --brand-color-medium: #356ca8;
   --brand-color-light: #b3d7ed;
-  --brand-color-highlight: #E9F250;
-  --brand-color-purple: #6661CF;
-  --brand-color-turquoise: #3DC2C9;
-  --brand-color-orange: #F75938;
+  --brand-color-highlight: #e9f250;
+  --brand-color-purple: #6661cf;
+  --brand-color-turquoise: #3dc2c9;
+  --brand-color-orange: #f75938;
   --ui-color-dark: #000000;
   --ui-color-off-dark: #222222;
   --ui-color-mid-dark: #595959;
@@ -31,4 +32,26 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .font-var-extrabold {
+    font-variation-settings: "wght" 900, "wdth" 100;
+  }
+  .font-var-extrabold-condensed {
+    font-variation-settings: "wght" 900, "wdth" 60;
+  }
+
+  .nasm-primary-btn {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--ui-color-light);
+    border-radius: 4px;
+    color: var(--brand-color-black);
+    transition: all 0.2s ease-out;
+  }
 }
