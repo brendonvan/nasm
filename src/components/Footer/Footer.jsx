@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="absolute bottom-0">
+    <div className="">
         <p>Footer</p>
     </div>
   );
