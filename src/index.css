@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--ui-color-light);
+  background-color: var(--ui-color-off-dark);
 
   /* Color Variables */
   --brand-color-black: #000000;
@@ -31,4 +31,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .font-var-extrabold {
+    font-variation-settings: "wght" 900, "wdth" 100
+  }
+  .font-var-extrabold-condensed {
+    font-variation-settings: "wght" 900, "wdth" 60
+  }
+
+  .nasm-primary-btn {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.32px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--ui-color-light);
+    color: var(--brand-color-black);
+    transition: all 0.2s ease-out;
+}
 }
