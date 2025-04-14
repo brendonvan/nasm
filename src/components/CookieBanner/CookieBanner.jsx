@@ -27,7 +27,7 @@ function CookieBanner() {
                 View Policy
               </button>
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <button
                 onClick={hideCookieBanner}
                 className="flex-none leading-[100%] flex items-center justify-center px-[7px] pt-[1px] pb-[4px] bg-[var(--brand-color-highlight)] text-[var(--brand-color-black)] rounded-[12px]"
