@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useHoverIntent } from "./utilities/useHoverIntent";
 import Dropdown from "./Dropdown";
@@ -21,6 +21,33 @@ function Navbar({ currentPage }) {
   function signInButton() {
     console.log("REDIRECT TO SIGN IN W/ DATA");
   }
+  
+  useEffect(() => {
+    // Handler for scrolling
+    const handleScroll = () => {
+      if (hoveredItemId !== null) {
+        setHoveredItemId(null);
+      }
+    };
+
+    // Handler for mouse leaving the window
+    const handleMouseLeaveWindow = () => {
+      if (hoveredItemId !== null) {
+        setHoveredItemId(null);
+      }
+    };
+
+    // Add listeners when component mounts
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.documentElement.addEventListener('mouseleave', handleMouseLeaveWindow);
+
+    // Cleanup listeners when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.documentElement.removeEventListener('mouseleave', handleMouseLeaveWindow);
+    };
+    // Dependencies: Ensure effect re-runs if these change
+  }, [hoveredItemId, setHoveredItemId]);
 
   return (
     <div className="relative">
