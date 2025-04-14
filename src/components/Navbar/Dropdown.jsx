@@ -30,7 +30,7 @@ function Dropdown({
 
   return (
     <div
-      className="absolute top-[82px] left-0 w-full bg-white z-40"
+      className="absolute top-[82px] left-0 w-full bg-white z-40 "
       onMouseEnter={handleDropdownEnter}
       onMouseLeave={handleMouseLeave}
     >

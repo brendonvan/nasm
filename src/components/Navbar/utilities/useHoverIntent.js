@@ -10,7 +10,7 @@ const DEFAULT_DELAY = 200;
  * hoveredItemId: string | number | null,
  * handleTriggerEnter: (itemId: string | number) => void,
  * handleDropdownEnter: () => void,
- * handleLeave: () => void,
+ * handleMouseLeave: () => void,
  * setHoveredItemId: React.Dispatch<React.SetStateAction<string | number | null>>
  * }} - Object containing state and event handlers.
  */
@@ -44,7 +44,7 @@ export function useHoverIntent(delay = DEFAULT_DELAY) {
   }, [clearLeaveTimeout]);
 
   // Call when mouse leaves a trigger element OR the dropdown container
-  const handleLeave = useCallback(() => {
+  const handleMouseLeave = useCallback(() => {
     clearLeaveTimeout(); // Clear previous timeout just in case
     // Start a new timeout to set the hovered item to null after a delay
     leaveTimeoutId.current = setTimeout(() => {
@@ -67,7 +67,7 @@ export function useHoverIntent(delay = DEFAULT_DELAY) {
     hoveredItemId,       // The ID of the item currently hovered (or null)
     handleTriggerEnter,  // Attach to onMouseEnter of trigger items (li)
     handleDropdownEnter, // Attach to onMouseEnter of dropdown container
-    handleLeave,         // Attach to onMouseLeave of BOTH triggers and dropdown
+    handleMouseLeave,         // Attach to onMouseLeave of BOTH triggers and dropdown
     setHoveredItemId,    // Allow direct setting (e.g., to close on click)
   };
 }
