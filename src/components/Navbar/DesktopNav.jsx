@@ -10,7 +10,7 @@ function DesktopNav({ navItems, handleTriggerEnter, handleMouseLeave }) {
             key={item.id}
             onMouseEnter={() => handleTriggerEnter(item.id)}
             onMouseLeave={handleMouseLeave}
-            className="py-[calc(83px/2-1rem)]" // You might pass height or calculate differently if needed
+            className="py-[calc(83px/2-1rem)]"
           >
             {item.path && (!item.dropdownItems || item.dropdownItems.length === 0) ? (
               <Link to={item.path} className="block cursor-pointer">
