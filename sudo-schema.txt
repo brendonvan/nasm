@@ -1,0 +1,119 @@
+User
+UserID INT
+FirstName VARCHAR(100)
+LastName VARCHAR(100)
+Email VARCHAR(255)
+PasswordHash VARCHAR(255)
+Bio TEXT
+ProfilePictureURL VARCHAR(2048)
+Role VARCHAR(50)
+CreatedAt TIMESTAMP
+UpdatedAt TIMESTAMP
+
+Category
+CategoryID INT
+Name VARCHAR(100)
+ParentCategoryID INT
+Description TEXT
+
+Course
+CourseID INT
+Title VARCHAR(255)
+Subtitle VARCHAR(255)
+Description TEXT
+Language VARCHAR(50)
+Level VARCHAR(50)
+Price DECIMAL(10, 2)
+CoverImageURL VARCHAR(2048)
+PromoVideoURL VARCHAR(2048)
+InstructorID INT
+CategoryID INT
+PublishedStatus VARCHAR(50)
+CreatedAt TIMESTAMP
+UpdatedAt TIMESTAMP
+LastPublishedAt TIMESTAMP
+
+Section
+SectionID INT
+CourseID INT
+Title VARCHAR(255)
+Order INT
+
+Lecture
+LectureID INT
+SectionID INT
+Title VARCHAR(255)
+ContentType VARCHAR(50)
+ContentURL VARCHAR(2048)
+TextContent TEXT
+Duration INT
+Order INT
+IsPreviewable BOOLEAN
+CreatedAt TIMESTAMP
+UpdatedAt TIMESTAMP
+
+Enrollment
+EnrollmentID INT
+UserID INT
+CourseID INT
+EnrollmentDate TIMESTAMP
+CompletedDate TIMESTAMP
+LastAccessed TIMESTAMP
+
+Review
+ReviewID INT
+UserID INT
+CourseID INT
+Rating TINYINT
+Comment TEXT
+ReviewDate TIMESTAMP
+
+Payment
+PaymentID INT
+UserID INT
+CourseID INT
+Amount DECIMAL(10, 2)
+Currency VARCHAR(3)
+PaymentDate TIMESTAMP
+PaymentMethod VARCHAR(50)
+TransactionID VARCHAR(255)
+Status VARCHAR(50)
+
+Wishlist
+WishlistID INT
+UserID INT
+CourseID INT
+AddedDate TIMESTAMP
+
+UserProgress
+ProgressID INT
+UserID INT
+LectureID INT
+EnrollmentID INT
+CompletedDate TIMESTAMP
+Status VARCHAR(50)
+
+Question
+QuestionID INT
+UserID INT
+CourseID INT
+LectureID INT
+Title VARCHAR(255)
+Body TEXT
+QuestionDate TIMESTAMP
+
+Answer
+AnswerID INT
+QuestionID INT
+UserID INT
+Body TEXT
+AnswerDate TIMESTAMP
+IsInstructorAnswer BOOLEAN
+
+Announcement
+AnnouncementID INT
+CourseID INT
+InstructorID INT
+Title VARCHAR(255)
+Body TEXT
+PostDate TIMESTAMP
