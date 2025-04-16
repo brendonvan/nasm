@@ -1,18 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "peridot-pe-variable", system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-variation-settings: "wdth" 100, "wght" 400;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: var(--ui-color-light);
-  background-color: var(--ui-color-off-dark);
-
   /* Color Variables */
+  --global-font-family: "peridot-pe-variable", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   --brand-color-black: #000000;
   --brand-color-dark: #123257;
   --brand-color-medium: #356ca8;
@@ -27,6 +18,16 @@
   --ui-color-mid-light: #d6d6d6;
   --ui-color-off-light: #f5f5f5;
   --ui-color-light: #ffffff;
+  
+  font-family: var(--global-font-family);
+  font-variation-settings: "wdth" 100, "wght" 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--ui-color-light);
+  background-color: var(--ui-color-off-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
