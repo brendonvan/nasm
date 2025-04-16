@@ -54,7 +54,7 @@ function Navbar({ currentPage }) {
       {/* Navbar */}
       <nav
         aria-label="Main Navigation"
-        className="relative min-w-[1024px] max-w-[1440px] w-full h-[83px] px-4 flex items-center justify-between z-[9999]"
+        className="relative lg:min-w-[1024px] max-w-[1440px] w-full h-[83px] px-4 flex items-center justify-between z-[9999]"
       >
         {/* Left Side */}
         <div className="flex items-center justify-start">
